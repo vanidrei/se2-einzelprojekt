@@ -43,7 +43,7 @@ class LeaderboardControllerTests {
         val second = GameResult(2, "second", 20, 10.0) // 1.
         val third = GameResult(3, "third", 20, 15.0) // 2.
 
-        whenever(mockedService.getGameResults()).thenReturn(listOf(second, first, third)) // verkehrt um klar zu sehen ob sortiert wird
+        whenever(mockedService.getGameResults()).thenReturn(listOf(first, third, second)) // verkehrt um klar zu sehen ob sortiert wird
 
         val res: List<GameResult> = controller.getLeaderboard()
 
